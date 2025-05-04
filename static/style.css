@@ -1,0 +1,83 @@
+body {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
+    transition: background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    background: #0f0f0f;
+}
+
+body.dark-mode {
+    background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 25%, #262626 50%, #333333 75%, #0d0d0d 100%);
+    background-size: 200% 200%;
+    animation: techBackground 20s linear infinite;
+}
+
+body:not(.dark-mode) {
+    background: #f0f0f0;
+    color: #000000;
+}
+
+.container {
+    background-color: rgba(30, 30, 30, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #00ffff;
+    width: 300px;
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    cursor: grab;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #6200ee;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+@keyframes techBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
